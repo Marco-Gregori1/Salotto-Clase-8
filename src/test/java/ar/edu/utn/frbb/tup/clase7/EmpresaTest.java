@@ -6,8 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EmpresaTest {
 
-    Empresa empresa;
-
     @Test
     void testAgregarEmpleadoOk() {
         empresa = new Empresa();
@@ -18,4 +16,16 @@ public class EmpresaTest {
         empresa.agregarEmpleado(e);
         assertEquals(cantidadEmpleadosEfectiva+1, empresa.getCantidadEmpleados());
     }
+
+    void testAgregarProyecto() {
+        proyecto = new Proyecto();
+        int cantidadProyectosEsperada = 0;
+        int cantidadProyectosEfectiva = empresa.getCantidadProyectos();
+        assertEquals(cantidadProyectosEsperada, cantidadProyectosEfectiva);
+        Proyecto p = new Proyecto();
+        empresa.agregarProyecto(p);
+        assertEquals(cantidadProyectosEfectiva+1, empresa.getCantidadProyectos());
+    }
+
+
 }
