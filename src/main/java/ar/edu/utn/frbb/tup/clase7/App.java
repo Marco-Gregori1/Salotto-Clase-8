@@ -14,7 +14,8 @@ public class App
         Empleado e = new Empleado();
 
         System.out.println( "Hello World!" );
-
+        Cliente Cliente1 = new Cliente("23264564379","Edenor","Av. Primero de Mayo 1200","Santa Fe");
+        System.out.println( Cliente1.toString());
     }
     
 }
