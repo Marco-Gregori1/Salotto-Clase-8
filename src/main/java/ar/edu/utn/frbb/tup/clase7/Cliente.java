@@ -10,13 +10,15 @@ public class Cliente {
 
     //constructores
 
-    public Cliente(String cuit, String nombreCliente, String direccionCliente, String provinciaCliente) {
+    public Cliente(String cuit, String nombreCliente,String provinciaCliente,String direccionCliente) {
         this.cuit = cuit;
         this.nombreCliente = nombreCliente;
         this.direccionCliente = direccionCliente;
         this.provinciaCliente = provinciaCliente;
     }
+    public Cliente(){
 
+    }
 
     // getters y setters
 
@@ -28,27 +30,27 @@ public class Cliente {
         this.nombreCliente = nombreCliente;
     }
 
-    public String getCuil() {
-        return cuil;
+    public String getCuit() {
+        return cuit;
     }
 
-    public void setCuil(String cuil) {
-        this.cuil = cuil;
+    public void setCuit(String cuil) {
+        this.cuit = cuil;
     }
 
     public String getProvinciaCliente() {
-        return ProvinciaCliente;
+        return provinciaCliente;
     }
 
     public void setProvinciaCliente(String ProvinciaCliente) {
-        this.ProvinciaCliente = ProvinciaCliente;
+        this.provinciaCliente = ProvinciaCliente;
     }
 
-    public int getDireccionCliente() {
+    public String getDireccionCliente() {
         return direccionCliente;
     }
 
-    public void direccionCliente(String direccionCliente) {
+    public void setDireccionCliente(String direccionCliente) {
         this.direccionCliente = direccionCliente;
     }
 
@@ -56,12 +58,12 @@ public class Cliente {
     // metodos
 
     @Override
-    public String DatosCliente() {
+    public String toString() {
         return "Cliente{" +
                 "Nombre Cliente='" + nombreCliente + '\'' +
                 ", Cuit=" + cuit +
                 ", Provincia ='" + provinciaCliente + '\'' +
-                ", Direccion ='" + direccionClienteCliente + '\'' +
+                ", Direccion ='" + direccionCliente + '\'' +
                 '}';
     }
 }
